@@ -466,7 +466,7 @@ class CalendarPage extends Component {
             <div>
                 {pizza}
                 <Calendar
-                    thisYear={this.thisYear}
+                    thisYear={this.state.thisYear}
                     prevMonth={this.prevMonth}
                     nextMonth={this.nextMonth}
                     thisMonth={this.state.thisMonth}

@@ -4,7 +4,6 @@ import { Redirect } from 'react-router'
 
 import Nav from "./components/Nav";
 import NoMatch from "./pages/NoMatch";
-import LogOut from "./pages/LogOut";
 import Home from "./pages/Home";
 import Calendar from "./pages/Calendar";
 import Contacts from './components/contacts/Contacts';
@@ -18,8 +17,8 @@ import { Provider } from './context';
 
 import "./App.css";
 var logout = function () {
-  sessionStorage.clear();
-  
+  sessionStorage.setItem("userName", "null");
+  sessionStorage.setItem("email", "null");
 }
 const App = () =>
 
@@ -32,16 +31,14 @@ const App = () =>
       <Provider>
         <Switch>
 
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/logout" component={LogOut} />
-
+          <Route exact path="/" component={Home} />
           <Route exact path="/calendar" component={Calendar} />
           <Route exact path="/news" component={News} />
           <Route exact path="/contacts" component={Contacts} />
           <Route exact path="/contacts/add" component={AddContact} />
           <Route exact path="/contacts/edit/:id" component={EditContact} />
           <Route exact path="/workspace" component={WorkSpace} />
-          <Route exact path="/" component={Facebook} />
+          <Route exact path="/login" component={Facebook} />
           <Route path="/home/:id" component={Home} />
           <Route component={NoMatch} />
         </Switch>

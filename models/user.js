@@ -27,7 +27,7 @@ var Blog = new Schema({
 
 var userSchema = new Schema( {
     logedIn: Boolean,
-    aboutMe: String,
+    aboutMe: { type: String, default: "0" },
     user: { type: String, default: "0" },
     email: { type: String, default: "0" },
     picture: { type: String, default: "picture" },

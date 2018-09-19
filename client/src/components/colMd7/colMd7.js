@@ -8,7 +8,6 @@ const ColMd7 = (props) => (
             {props.childComponent1}
             {props.childComponent2}
             {props.childComponent3}
-            <Col1> </Col1>
             {props.childComponent4}
             <Col1> </Col1>
             {props.childComponent5}
@@ -16,6 +15,11 @@ const ColMd7 = (props) => (
             
             {props.childComponent6}
             {props.childComponent7}
+            <br></br>
+            {props.childComponent8}
+            {props.childComponent9}
+            {props.childComponent10}
+
         </div>
     </div>
 )

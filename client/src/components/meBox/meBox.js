@@ -8,10 +8,9 @@ const MeBox = ( props ) => (
         <h4>{props.name}</h4>
         <br />
         <hr className="w3-clear" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat.
-              </p>
+        <textarea id= "aboutMe" readOnly={props.editable} onChange={props.aboutMeText} style={{overflow:"auto",borderWidth:0,backgroundColor: props.background, width:100+"%", left: -10, display:"block", height:props.scrollHeight+"px", boxShadow:0+"px"}}>Text about me!
+         
+              </textarea>
         <div className="w3-row-padding" 
         style={{margin:0 -16}}
         >
@@ -23,7 +22,7 @@ const MeBox = ( props ) => (
             </div>
         </div>
 
-        <button type="button" className="w3-button w3-round w3-onhover-black w3-theme-d2 w3-margin-bottom">
+        <button onClick={props.editFunct} type="button" className="w3-button w3-round w3-onhover-black w3-theme-d2 w3-margin-bottom">
             <i className="fa fa-pencil"></i> Edit</button>
     </div>
 )

@@ -9,9 +9,7 @@ router.route( "/" )
     .patch( userController.updateChildSchema);
 
 // Matches with "/api/articles/:id"
-router
-    .route( "/userData/:id" )
-    .get( userController.findUserData )
+
 
 router
     .route( "/:id" )

@@ -133,7 +133,15 @@ module.exports = {
         .catch( e => res.status( 400 ).send( e ) ); console.log( "BAD" );
     }
     if ( method === "blog" ) {
-      console.log(req.body.blogTitle)
+      // db.Posts
+      
+      // console.log(req.body.blogTitle)
+      // db.Posts
+      // .findOne( { email: req.body.email } )
+      // .then( function ( record ) {
+      //   record.blogs.push( { topic: req.body.blog, note: req.body.blogTitle } )},
+
+
       db.User
         .findOne( { email: req.body.email } )
         .then( function ( record ) {

@@ -9,7 +9,7 @@ const Calendar = ( props ) => (
             <button onClick={props.prevMonth} style={{ position: "relative", bottom: "10px", left: "10px"}} className="fa fa-chevron-circle-left" ></button>
 
             <div style={{ textAlign: "center" , display:"inline-block", width:450+"px"}}>
-                <span style={{ fontSize: 45}} >{moment( props.thisMonth ).format( "MMMM" )}    {moment(props.thisYear).format("YYYY")}</span>
+                <span style={{ fontSize: 45}} >{moment( props.thisMonth ).format( "MMMM" )}   {props.thisYear}</span>
             </div>
             <button onClick={props.nextMonth} style={{ position: "relative", bottom: "10px", right: "10px" }} className="fa fa-chevron-circle-right"></button>
 
